@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroscience: Brain's Odyssey</title>
+    <style>
+        section {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            background-color: #f0f0f0;
+            transition: filter 0.5s ease; /* Add transition for background blur effect */
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .content {
+            padding: 2em;
+            z-index: 888;
+            height: 100%;
+            width: 40%;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .content.active {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+
+        .card {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 60vh;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 10px; /* Added space between videos */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            filter: blur(0); /* Initial blur value */
+            transition: filter 0.5s ease; /* Add transition for video blur effect */
+            object-fit: contain; /* Maintain aspect ratio without zooming in fullscreen */
+        }
+
+        ul {
+            width: 40%;
+        }
+
+        #zone {
+            background-image: url("static/state.webp");
+            background-size: 40%;
+            background-repeat: no-repeat;
+            background-position: 100% 60%;
+        }
+        
+        #tiger {
+            width: 55%;
+        }
+
+        #brain {
+            width: 45%;
+            height: 45%;
+            padding-top: 2em;
+            padding-left: 1em;
+        }
+
+        #hormones {
+            left: 40%;
+            position: sticky;
+            width: 30%;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            padding: 1px;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+        }
+
+        .youtube-video {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+        }
+
+        #youtube-ref {
+            position: absolute;
+            right: 2.5em;
+            bottom: 2.5em;
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Brain</h1>
+    </header>
+    <section>
+        <div class="content active" id="intro">
+            <h1>Unveiling the Mysteries of the Human Brain: <br><span>Exploring Its Power and Potential</span></h1>
+            <p>
+                Drs. Greg Dunn and Brian Edwards, both artists and scientists, collaborated on Self Reflected, using reflective microetching to unveil the intricate neural choreographies within the human brain. This artwork serves as a reminder of the extraordinary nature of our minds and our shared humanity.
+            </p>
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/lfeNtZODseA?si=RxXiuoIOnmeuUANl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="content" id="fear">
+            <h1>Mastering Fear:<br><span>Specialized Exercises for Combat Situations.</span></h1>
+            <ul>
+                <li>The amygdala is the central command center for emotional reactions, particularly fear.</li>
+                <li>The frontal cortex is the second floor of the brain, involved in rational thought and problem-solving. It helps control the amygdala's fast reactions to potential threats.</li>
+            </ul>
+            <img id="brain" src="static/brain.webp" alt="brain">
+            <p> 
+                Recruits are put through specialized training to change the way their brains react to fear               
+            </p>
+            <p> 
+                By exploring the intricacies of the brain's fear circuitry, the program leverages this knowledge to design exercises that reshape neural responses to fear-inducing stimuli. Neuroscientific insights guide participants in rewiring their brain's automatic fear reactions, promoting adaptive changes in the amygdala and prefrontal cortex. Through this neuroscience-informed approach, the program enhances individuals' neural plasticity, fostering resilience and facilitating more controlled responses to fear in high-pressure combat situations.               
+            </p>
+        </div>
+
+        <div class="content" id="stress">
+            <h1>Take a Breath and Overcome:<br><span>Mastering Stress for Success</span></h1>
+            <p>
+                In the pursuit of stress relief, understanding the intricate interplay between neuroscience and well-being unveils powerful strategies. These evidence-based techniques leverage the brain's inherent capabilities to mitigate stress and enhance mental resilience.
+            </p>
+            <ul>
+                <li>Deep Breathing</li>
+                <li>Mindfulness Meditation</li>
+                <li>Aerobic Exercises</li>
+                <li>Social Connections and Oxytocin</li>
+                <li>Quality Sleep and Cortisol Regulation</li>
+                <li>Cognitive Behavioral Techniques like reframing negative thoughts</li>
+              </ul>
+              <img id="hormones" src="static/hormones.webp" alt="brain">
+
+        </div>
+
+        <div class="content" id="decision">
+            <h1>Revolutionizing Decision-Making:<br><span>How Advanced Technology Can Enhance Tactical Response</span></h1>
+            <img src="static/decision.webp" alt="brain" width="75%">
+            <p>
+                The frontal cortex is the part of the brain that makes us most human. By integrating insights into the brain's neural pathways, these innovations empower individuals to process information rapidly, adapt to dynamic scenarios, and execute precise responses in high-pressure situations. The synergy between cutting-edge technology and the complexities of the human brain holds the key to a paradigm shift in tactical decision-making, ushering in a new era of heightened efficiency and effectiveness..
+            </p>
+        </div>
+
+
+        <div class="content" id="zone">
+            <h1>Being in Zone<br><span>How Tiger Woods Modulates his Brain to Succeed in Golf</span></h1>
+            <p id="tiger">
+                Tiger Woods' consistent success is attributed to his adept ability to modulate his brain functioning, even though scientists can't directly scan his brain in action. Observing subtle cues, such as minimal eye blinking during a putt, hints at his low anxiety levels and a state resembling a drowsy, yet highly concentrated state. This phenomenon aligns with the concept of the "flow state," where athletes experience a unique feeling of being in the zone. This state, characterized by effortless movements, results from a harmonious interplay between practiced cerebellar functions, focused frontal lobes, and low anxiety levels within the amygdala of the limbic system, offering insights into the neurobiology behind peak athletic performance.
+            </p>
+        </div>
+
+
+
+        <div class="card">
+            <div class="carousel-container">
+                <div class="video-carousel" onmousedown="startSwipe(event)" ontouchstart="startSwipe(event)">
+                    <video controls width="300" height="400" onclick="playVideo(0)">
+                        <source src="static/1.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300" height="400" onclick="playVideo(1)">
+                        <source src="static/2.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300" height="400" onclick="playVideo(2)">
+                        <source src="static/3.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300" height="400" onclick="playVideo(3)">
+                        <source src="static/4.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300" height="400" onclick="playVideo(4)">
+                        <source src="static/5.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- Add more videos as needed -->
+                </div>
+            </div>
+            <button onclick="prevVideo()">Previous</button>
+            <button onclick="nextVideo()">Next</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Site made with ❤️ by Sourabh Kumar Singh</p>
+        <span id="youtube-ref"><a href="https://www.youtube.com/watch?v=YBsAwUn-kVs&ab_channel=BiologicalScience" target="_blank">Documentary Reference</a></span>
+    </footer>
+
+    <script>
+
+        const contents = document.querySelectorAll(".content");
+
+        let currentIndex = 0;
+        let startX = 0;
+        let isSwiping = false;
+
+        function startSwipe(event) {
+            startX = event.pageX || event.touches[0].pageX;
+            isSwiping = true;
+        }
+
+        function endSwipe() {
+            isSwiping = false;
+        }
+
+        function handleSwipe(event) {
+            if (!isSwiping) return;
+
+            const currentX = event.pageX || event.touches[0].pageX;
+            const diffX = startX - currentX;
+
+            if (Math.abs(diffX) > 50) { // Adjust the threshold for sensitivity
+                if (diffX > 0) {
+                    nextVideo();
+                } else {
+                    prevVideo();
+                }
+                endSwipe();
+            }
+        }
+
+        document.addEventListener('mousemove', handleSwipe);
+        document.addEventListener('touchmove', handleSwipe);
+        document.addEventListener('mouseup', endSwipe);
+        document.addEventListener('touchend', endSwipe);
+
+
+        let sliderNav = function(manual){
+
+            // slides.forEach((slide) => {
+            //     slide.classList.remove("active");
+            // });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            // slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+
+        function nextVideo() {
+            const carousel = document.querySelector('.video-carousel');
+            const videos = document.querySelectorAll('.video-carousel video');
+            const videoWidth = videos[0].offsetWidth;
+
+            stopAllVideos();
+            currentIndex = (currentIndex + 1) % videos.length;
+            const translateValue = -currentIndex * videoWidth;
+
+            videos[currentIndex].style.filter = 'blur(0)';
+            carousel.style.transform = `translateX(${translateValue}px)`;
+            sliderNav(currentIndex);
+        }
+
+        function prevVideo() {
+            const carousel = document.querySelector('.video-carousel');
+            const videos = document.querySelectorAll('.video-carousel video');
+            const videoWidth = videos[0].offsetWidth;
+
+            stopAllVideos();
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            const translateValue = -currentIndex * videoWidth;
+            videos[currentIndex].style.filter = 'blur(0)';
+
+            carousel.style.transform = `translateX(${translateValue}px)`;
+            sliderNav(currentIndex);
+
+        }
+
+        function playVideo(index) {
+            stopAllVideos();
+            const videos = document.querySelectorAll('.video-carousel video');
+            videos[index].play();
+            videos[index].style.filter = 'blur(0)';
+        }
+
+        function stopAllVideos() {
+            const videos = document.querySelectorAll('.video-carousel video');
+            videos.forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+                video.style.filter = 'blur(3px)'; // Blur the background when not playing
+            });
+        }
+        
+    </script>
+</body>
+</html>
